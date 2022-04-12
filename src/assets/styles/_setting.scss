@@ -13,7 +13,7 @@
   color: #30343F;
 }
 body{
-  width: 100%;
+  @include introMob;
 }
 
 @media screen and (min-width: 767px){

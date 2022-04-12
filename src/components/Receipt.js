@@ -8,15 +8,12 @@ const Receipt = () => {
   useEffect(() => {
     axios
       .get(
-        "https://api.openweathermap.org/data/2.5/onecall?lat=50.62&lon=5.58&exclude=hourly,daily&appid=4a1e0b38ccc55facbfbf905ee9aa7f35"
+        "https://api.openweathermap.org/data/2.5/forecast?q=Liege&units=metric&appid=fe380701dc6170c975b2fd9a06e01656"
       )
-      .then((element) => setCurrent(element.data.current));
+      .then((element) => setCurrent(element.data));
   }, []);
-  // console.log(current);
   return (
-    <div>
-      <CurrentCard key={uuidv4()} weather={current} />
-    </div>
+    <div>{current && <CurrentCard key={uuidv4()} weather={current} />}</div>
   );
 };
 
