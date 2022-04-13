@@ -1,4 +1,20 @@
 .card{
   @include introMob;
-  border: 0.1rem solid black;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.3rem $shadow;
+  &__date{
+    font-size: 3rem;
+  }
+  &__city{
+    font-size: 2rem;
+  }
+  &__desc{
+    font-size: 2rem;
+  }
+  &__temp{
+    font-size: 2rem;
+  }
+  &__deg{
+    font-size: 2rem;
+  }
 }

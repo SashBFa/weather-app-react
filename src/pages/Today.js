@@ -6,7 +6,6 @@ const Today = () => {
   return (
     <div>
       <Navigation />
-      <h1>Today</h1>
       <Receipt />
     </div>
   );
