@@ -3,10 +3,11 @@ import Navigation from "../components/Navigation";
 import Receipt from "../components/Receipt";
 
 const Today = () => {
+  const days = [0];
   return (
     <div>
       <Navigation />
-      <Receipt />
+      <Receipt thatDay={days} />
     </div>
   );
 };

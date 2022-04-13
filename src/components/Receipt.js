@@ -1,19 +1,25 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import CurrentCard from "./CurrentCard";
+import Card from "./Card";
 
-const Receipt = () => {
-  const [current, setCurrent] = useState();
+const Receipt = (props) => {
+  const [weather, setWeather] = useState();
   useEffect(() => {
     axios
       .get(
         `https://api.openweathermap.org/data/2.5/forecast?q=Liege&units=metric&appid=${process.env.REACT_APP_KEY}`
       )
-      .then((element) => setCurrent(element.data));
+      .then((element) => setWeather(element.data));
   }, []);
   return (
-    <div>{current && <CurrentCard key={uuidv4()} weather={current} />}</div>
+    <div>
+      {weather &&
+        props.thatDay.map((nbr) => (
+          <Card key={uuidv4()} weather={weather} day={nbr} />
+        ))}
+      ;
+    </div>
   );
 };
 
