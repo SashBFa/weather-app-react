@@ -8,7 +8,7 @@ const Receipt = () => {
   useEffect(() => {
     axios
       .get(
-        "https://api.openweathermap.org/data/2.5/forecast?q=Liege&units=metric&appid=fe380701dc6170c975b2fd9a06e01656"
+        `https://api.openweathermap.org/data/2.5/forecast?q=Liege&units=metric&appid=${process.env.REACT_APP_KEY}`
       )
       .then((element) => setCurrent(element.data));
   }, []);

@@ -1,10 +1,10 @@
 import React from "react";
-import Receipt from "../components/Receipt";
+import Navigation from "../components/Navigation";
 
 const Home = () => {
   return (
     <div className="home">
-      <Receipt />
+      <Navigation />
     </div>
   );
 };
