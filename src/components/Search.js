@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { addWeather } from "../redux/actions/apiWeather.action";
 import { addSearch } from "../redux/actions/search.action";
 
 const Search = () => {
@@ -8,7 +9,8 @@ const Search = () => {
   const searching = (e) => {
     e.preventDefault();
     dispatch(addSearch(search));
-    setSearch("");
+    dispatch(addWeather(search));
+    // setSearch("");
   };
   return (
     <div className="formContainer">
