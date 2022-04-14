@@ -13,7 +13,9 @@ const Card = (props) => {
     <div
       className="card"
       style={{
-        background: `url(./assets/images/${props.weather.list[0].weather[0].main}.jpg) center/cover`,
+        background: `url(./assets/images/${
+          props.weather.list[props.day].weather[0].main
+        }.jpg) center/cover`,
       }}
     >
       <h2 className="card__date">{theDate()}</h2>

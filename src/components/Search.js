@@ -1,18 +1,23 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addSearch } from "../redux/actions/search.action";
 
 const Search = () => {
-  const search = useRef();
+  const [search, setSearch] = useState("");
+  const dispatch = useDispatch();
   const searching = (e) => {
     e.preventDefault();
-    console.log(search.current.value);
+    dispatch(addSearch(search));
+    setSearch("");
   };
   return (
     <div className="formContainer">
-      <form onSubmit={searching}>
+      <form onSubmit={(e) => searching(e)}>
         <input
           type="text"
           name="search"
-          ref={search}
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
           className="formContainer__search"
           placeholder="Search.."
           required
