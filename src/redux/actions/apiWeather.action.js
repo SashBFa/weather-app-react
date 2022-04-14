@@ -11,6 +11,6 @@ export const addWeather = (search) => {
       .then((element) => {
         dispatch({ type: ADD_WEATHER, payload: element.data });
       })
-      .catch((err) => console.log(err));
+      .catch((err) => alert("Sorry ! We did find this city"));
   };
 };

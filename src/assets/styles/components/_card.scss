@@ -5,7 +5,7 @@
   box-shadow: 0.1rem 0.1rem 0.3rem $shadow;
   text-align: center;
   height: 35rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: $white;
   margin-bottom: 1rem;
   grid-template-areas: 
   "a a a"
@@ -17,31 +17,31 @@
     grid-area: a;
     font-size: 3.5rem;
     font-weight: 800;
-    mix-blend-mode: hard-light;
+    mix-blend-mode: difference;
   }
   &__city{
     grid-area: b;
     font-size: 2rem;
     font-weight: 400;
-    mix-blend-mode: hard-light;
+    mix-blend-mode: difference;
   }
   &__desc{
     grid-area: c;
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    mix-blend-mode: hard-light;
+    mix-blend-mode: difference;
   }
   &__temp{
     grid-area: d;
     font-size: 10rem;
     font-weight: 500;
-    mix-blend-mode: hard-light;
+    mix-blend-mode: difference;
   }
   &__deg{
     font-size: 2rem;
     font-weight: 600;
-    mix-blend-mode: hard-light;
+    mix-blend-mode: difference;
     em{
       font-weight: 300;
     }

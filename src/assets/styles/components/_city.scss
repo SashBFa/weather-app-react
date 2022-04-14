@@ -1,0 +1,20 @@
+.cityzen{
+  @include introMob;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.3rem $shadow;
+  height: 35rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: center;
+  overflow: hidden;
+  h2{
+    font-size: 4.5rem;
+    color: $white;
+    mix-blend-mode: difference;
+    font-weight: 300;
+  }
+}

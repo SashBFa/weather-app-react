@@ -15,7 +15,7 @@ const Home = () => {
     <div className="home">
       {empty && <Navigation />}
       <Search />
-      {empty && <City city={search} />}
+      {empty && <City city={search} weather={weather} />}
     </div>
   );
 };

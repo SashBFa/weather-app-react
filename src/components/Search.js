@@ -10,7 +10,7 @@ const Search = () => {
     e.preventDefault();
     dispatch(addSearch(search));
     dispatch(addWeather(search));
-    // setSearch("");
+    setSearch("");
   };
   return (
     <div className="formContainer">
