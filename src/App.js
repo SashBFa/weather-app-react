@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Compare from "./pages/Compare";
@@ -8,13 +9,15 @@ import Today from "./pages/Today";
 const App = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/today" element={<Today />} />
-        <Route path="/previsions" element={<Previsions />} />
-        <Route path="/compare" element={<Compare />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
+      <AnimatePresence>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/today" element={<Today />} />
+          <Route path="/previsions" element={<Previsions />} />
+          <Route path="/compare" element={<Compare />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </AnimatePresence>
     </BrowserRouter>
   );
 };
