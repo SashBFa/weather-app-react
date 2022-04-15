@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Compare from "./pages/Compare";
-import Error404 from "./pages/Error404";
 import Home from "./pages/Home";
 import Previsions from "./pages/Previsions";
 import Today from "./pages/Today";
@@ -14,7 +13,7 @@ const App = () => {
         <Route path="/today" element={<Today />} />
         <Route path="/previsions" element={<Previsions />} />
         <Route path="/compare" element={<Compare />} />
-        <Route path="*" element={<Error404 />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
