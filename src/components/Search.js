@@ -32,7 +32,11 @@ const Search = () => {
           required
           autoComplete="off"
         />
-        <a href="#" className="formContainer__link">
+        <a
+          href="*"
+          onClick={(e) => alert("Work in progress!")}
+          className="formContainer__link"
+        >
           <i className="fa-solid fa-location-dot"></i> Use localisation
         </a>
       </form>

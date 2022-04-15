@@ -4,6 +4,7 @@ import Card from "../components/Card";
 import Navigation from "../components/Navigation";
 import Receipt from "../components/Receipt";
 import { motion } from "framer-motion";
+import Footer from "../components/Footer";
 
 const Compare = () => {
   const days = [0];
@@ -89,6 +90,7 @@ const Compare = () => {
           {weat && <Receipt thatDay={days} compare={weat} />}
         </div>
       </motion.div>
+      <Footer />
     </div>
   );
 };

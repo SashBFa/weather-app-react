@@ -2,6 +2,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Receipt from "../components/Receipt";
 import { motion } from "framer-motion";
+import Footer from "../components/Footer";
 
 const Previsions = () => {
   const days = [8, 16, 24, 32];
@@ -46,6 +47,7 @@ const Previsions = () => {
         </motion.h1>
         <Receipt thatDay={days} />
       </motion.div>
+      <Footer />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import Graphic from "../components/Graphic";
 import Navigation from "../components/Navigation";
 import Receipt from "../components/Receipt";
 import { motion } from "framer-motion";
+import Footer from "../components/Footer";
 
 const Today = () => {
   const days = [0];
@@ -50,6 +51,7 @@ const Today = () => {
           <Graphic />
         </div>
       </motion.div>
+      <Footer />
     </div>
   );
 };

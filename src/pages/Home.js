@@ -4,6 +4,7 @@ import Search from "../components/Search";
 import { useSelector } from "react-redux";
 import City from "../components/City";
 import { motion } from "framer-motion";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const search = useSelector((state) => state.searchReducer);
@@ -56,6 +57,7 @@ const Home = () => {
           {empty && <City city={search} weather={weather} />}
         </div>
       </motion.div>
+      <Footer />
     </div>
   );
 };
