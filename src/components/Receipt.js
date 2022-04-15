@@ -5,12 +5,19 @@ import Card from "./Card";
 
 const Receipt = (props) => {
   const search = useSelector((state) => state.apiWeatherReducer);
+  const data = () => {
+    if (props.compare) {
+      return props.compare;
+    } else {
+      return search;
+    }
+  };
 
   return (
     <div>
       {search &&
         props.thatDay.map((nbr) => (
-          <Card key={uuidv4()} weather={search} day={nbr} />
+          <Card key={uuidv4()} weather={data()} day={nbr} />
         ))}
       ;
     </div>

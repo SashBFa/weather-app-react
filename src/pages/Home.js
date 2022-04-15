@@ -14,6 +14,7 @@ const Home = () => {
   return (
     <div className="home">
       {empty && <Navigation />}
+      <h1>Weather React App</h1>
       <Search />
       {empty && <City city={search} weather={weather} />}
     </div>

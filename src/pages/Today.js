@@ -1,4 +1,5 @@
 import React from "react";
+import Graphic from "../components/Graphic";
 import Navigation from "../components/Navigation";
 import Receipt from "../components/Receipt";
 
@@ -8,6 +9,7 @@ const Today = () => {
     <div>
       <Navigation />
       <Receipt thatDay={days} />
+      <Graphic />
     </div>
   );
 };

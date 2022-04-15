@@ -14,6 +14,7 @@ const Search = () => {
   };
   return (
     <div className="formContainer">
+      <h2 className="formContainer__title">Choose a city</h2>
       <form onSubmit={(e) => searching(e)}>
         <input
           type="text"
