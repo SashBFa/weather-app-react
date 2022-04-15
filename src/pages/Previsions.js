@@ -7,6 +7,7 @@ const Previsions = () => {
   return (
     <div>
       <Navigation />
+      <h1>Weather React App</h1>
       <Receipt thatDay={days} />
     </div>
   );

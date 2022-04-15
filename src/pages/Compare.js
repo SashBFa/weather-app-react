@@ -22,8 +22,9 @@ const Compare = () => {
   };
 
   return (
-    <div>
+    <div className="compare">
       <Navigation />
+      <h1>Weather React App</h1>
       <div className="formContainer">
         <h2 className="formContainer__title">City to compare</h2>
         <form onSubmit={(e) => compare(e)}>
@@ -48,8 +49,10 @@ const Compare = () => {
           </a>
         </form>
       </div>
-      <Receipt thatDay={days} />
-      {weat && <Receipt thatDay={days} compare={weat} />}
+      <div className="compare__box">
+        <Receipt thatDay={days} />
+        {weat && <Receipt thatDay={days} compare={weat} />}
+      </div>
     </div>
   );
 };

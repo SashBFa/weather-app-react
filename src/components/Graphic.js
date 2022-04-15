@@ -8,7 +8,6 @@ const Graphic = () => {
   const search = useSelector((state) =>
     state.apiWeatherReducer.list.slice(0, 8)
   );
-  console.log(search);
   const theDate = (elem) => {
     let newDate = new Date(elem);
     let day = newDate.toLocaleString("default", { weekday: "short" });

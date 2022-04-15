@@ -30,6 +30,7 @@
     padding-left: 1rem;
     font-size: 2rem;
     color: $grey;
+    
   }
   &__button{
     box-shadow: 0.1rem 0.1rem 0.3rem $shadow;
@@ -40,6 +41,7 @@
     color: $grey;
     border-radius: 0.5rem;
     background-color: $white;
+    cursor: pointer;
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url(./../../../../public/assets/images/overlay.png);
   }
   &__link{
@@ -51,5 +53,34 @@
       text-shadow: 0.1rem 0.1rem 0 $shadow;
       margin-right: 0.3rem;
     }
+  }
+}
+@media screen and (min-width: 767px){
+  .formContainer{
+    @include introTab;
+    height: 25rem;
+    &__button{
+      width: 15rem;
+      height: 4rem;
+    }
+
+  }
+}
+@media screen and (min-width: 1024px){
+  .formContainer{
+    @include introDesk;
+    height: 30rem;
+    width: calc(50% - 2rem);
+    &__title{
+      height: 7rem;
+    }
+    form{
+      height: calc(100% - 7rem);
+    }
+  }
+}
+@media screen and (min-width: 1440px){
+  .formContainer{
+    @include introLarge;
   }
 }

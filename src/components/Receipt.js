@@ -14,7 +14,7 @@ const Receipt = (props) => {
   };
 
   return (
-    <div>
+    <div className="receipt">
       {search &&
         props.thatDay.map((nbr) => (
           <Card key={uuidv4()} weather={data()} day={nbr} />

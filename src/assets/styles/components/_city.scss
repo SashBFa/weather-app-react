@@ -28,3 +28,39 @@ h1{
 .graphic{
   @include introMob;
 }
+@media screen and (min-width: 767px){
+  .cityzen{
+    @include introTab;
+    margin-left: 2rem;
+    height: 25rem;
+  }
+  h1{
+    margin-bottom: 4rem;
+  }
+  .graphic{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
+@media screen and (min-width: 1024px){
+  .cityzen{
+    @include introDesk;
+    height: 30rem;
+    width: calc(50% - 2rem);
+  }
+  .graphic{
+    @include introDesk;
+    height: 35rem;
+    width: calc(50% - 2rem);
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1440px){
+
+}

@@ -9,10 +9,12 @@
 	padding: 4rem;
 }
 @mixin introDesk{
-	max-width: 1024px;
+	max-width: 1023px;
 	margin: 0 auto;
-	padding: 0rem;
+	padding: 2rem;
 }
 @mixin introLarge{
-	max-width: none;
+	max-width: 1023px;
+	margin: 0 auto;
+	padding: 2rem;
 }

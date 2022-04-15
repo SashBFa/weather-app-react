@@ -30,19 +30,78 @@ body{
   , #161b22d9), url(./../../../public/assets/images/overlay.png) no-repeat;
 
 }
-
 @media screen and (min-width: 767px){
   *{
       font-size: 75%;
+  }
+  body{
+    @include introTab;
+  }
+  .home{
+    &__box{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .today{
+    &__box{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .compare{
+    .formContainer{
+      margin-bottom: 2rem;
+    }
+    &__box{
+      display: flex;
+      justify-content: space-around;
+    }
+    .card{
+      padding: 2rem;
+    }
   }
 }
 @media screen and (min-width: 1024px){
   *{
       font-size: 87.5%;
   }
+  body{
+    @include introDesk;
+  }
+  .today{
+    &__box{
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .receipt{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .compare{
+    .formContainer{
+      height: 25rem;
+    }
+    .card{
+      width: 100%;
+    }
+  }
 }
 @media screen and (min-width: 1440px){
   *{
       font-size: 100%;
+  }
+  body{
+    @include introLarge;
+  }
+  .compare{
+    .card{
+      width: 30rem;
+      height: 20rem;
+      margin: 1rem;
+    }
   }
 }
